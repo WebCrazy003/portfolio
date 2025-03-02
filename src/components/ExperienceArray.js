@@ -1,52 +1,48 @@
 import { useState, useEffect } from 'react';
 
-const parseExperience = (mdContent) => {
-  const experience = [];
-  const lines = mdContent.split('\n');
-
-  for (let i = 0; i < lines.length; i++) {
-    const line = lines[i];
-
-    if (line.startsWith('## ')) {
-      const company = line.substr(3).trim();
-      const positionLine = lines[++i]
-        .substr(2)
-        .split('|')
-        .map((s) => s.trim());
-      const position = positionLine[0].slice(1, -1);
-      const duration = positionLine[1].trim();
-      const imageLine = lines[++i];
-      const image = imageLine.match(/!\[(.*)\]\((.*)\)/)[2];
-      const tags = lines[++i].split(':')[1].trim();
-      const badges = [];
-      const listItems = [];
-
-      /* eslint-disable-next-line no-empty */
-      while (lines[++i] && !lines[i].startsWith('- Badges:')) {}
-      while (lines[++i] && lines[i].startsWith('  - ')) {
-        const badgeLine = lines[i].substr(4).split('[');
-        const badgeName = badgeLine[0].trim();
-        const badgeColor = badgeLine[1].split(']')[0].trim();
-        badges.push({ name: badgeName, colorScheme: badgeColor });
-      }
-
-      while (lines[++i] && lines[i].startsWith('  - ')) {
-        listItems.push(lines[i].substr(4));
-      }
-
-      experience.push({
-        image,
-        company,
-        position,
-        duration,
-        badges,
-        listItems,
-        tags,
-      });
-    }
-  }
-
-  return experience;
+const parseExperience = () => {
+  return [
+    {
+      image: '../assets/startly.png',
+      company: 'Startly Labs, LLC',
+      position: 'Lead Front-End Engineer',
+      duration: '01/2022 - 02/2025',
+      badges: ['React', 'TypeScript', 'Ant Design', 'Mobx', 'React Native'],
+      listItems: [],
+    },
+    {
+      image: '../assets/collective.webp',
+      company: 'Collective Hub, Inc',
+      position: 'Senior Full-Stack Engineer',
+      duration: '06/2019 - 12/2021',
+      badges: ['Java', 'Spring', 'React', 'Microservice', 'Chakra UI'],
+      listItems: [],
+    },
+    {
+      image: '../assets/sweet.ico',
+      company: 'Social Sweet',
+      position: 'Senior Front-End Engineer',
+      duration: '01/2018 - 05/2019',
+      badges: ['Next.js', 'TypeScript', 'Material UI'],
+      listItems: [],
+    },
+    {
+      image: '../assets/soltech.webp',
+      company: 'Soltech, Inc',
+      position: 'Software Engineer',
+      duration: '10/2013 - 12/2017',
+      badges: [
+        'React',
+        'Angular',
+        'Vue.js',
+        'Node.js',
+        'Nest.js',
+        'PHP',
+        'AWS',
+      ],
+      listItems: [],
+    },
+  ];
 };
 
 const ExperienceArray = () => {

@@ -10,14 +10,11 @@
   - React Native [blue]
 
 ## Collective Hub, Inc
-- *Senior Full Stack Engineer* | 06/2019 - 12/2021
+- *Senior Full-Stack Engineer* | 06/2019 - 12/2021
 - ![logo512](../assets/logo512.png)
 - Tags: Category 2
 - Badges:
   - Badge [blue]
-- List Items:
-  - Point 1
-  - Point 2
 
 ## Company 3
 - *Role* | Mar'23 - Apr'23

@@ -2,7 +2,15 @@ import { useMemo } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
-import { Badge, Button, Container, Stack, Text, Wrap } from '@chakra-ui/react';
+import {
+  Badge,
+  Box,
+  Button,
+  Container,
+  Stack,
+  Text,
+  Wrap,
+} from '@chakra-ui/react';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
 import { IMAGE_ARRAY } from '../utils/constant';
@@ -35,13 +43,14 @@ function Detail({ color }) {
   return (
     <Container maxW="6xl" id="detail">
       <Stack direction="column" pt={20}>
-        <Button variant="plain" width={10} onClick={goHome}>
-          <FontAwesomeIcon icon={faArrowLeft} />
-        </Button>
-
-        <Text fontSize="3xl" mt={5}>
-          {IMAGE_ARRAY[project] && IMAGE_ARRAY[project].projectName}
-        </Text>
+        <Stack direction="row" mt={10} alignItems="center">
+          <Button variant="plain" width={10} onClick={goHome}>
+            <FontAwesomeIcon icon={faArrowLeft} />
+          </Button>
+          <Text fontSize="3xl" align="center" width="100%">
+            {IMAGE_ARRAY[project] && IMAGE_ARRAY[project].projectName}
+          </Text>
+        </Stack>
 
         <Stack direction="row" mt={10}>
           <Stack direction="column" width="75%" mr={4}>
@@ -63,35 +72,37 @@ function Detail({ color }) {
           </Stack>
 
           <Stack width="25%">
-            <Text fontSize="xl">About Us</Text>
-            <Text>{IMAGE_ARRAY[project] && IMAGE_ARRAY[project].about}</Text>
+            <Box position="sticky" top={100}>
+              <Text fontSize="xl">About</Text>
+              <Text>{IMAGE_ARRAY[project] && IMAGE_ARRAY[project].about}</Text>
 
-            <Stack direction="row" my={3}>
-              {buttonArray.map((item, index) => (
-                <Button
-                  key={index}
-                  colorScheme={color}
-                  bg={`${color}.400`}
-                  _hover={{
-                    bg: `${color}.500`,
-                  }}
-                  rounded="full"
-                  onClick={() => goProject(item.link)}
-                >
-                  {item.name}
-                </Button>
-              ))}
-            </Stack>
+              <Stack direction="row" my={3}>
+                {buttonArray.map((item, index) => (
+                  <Button
+                    key={index}
+                    colorScheme={color}
+                    bg={`${color}.400`}
+                    _hover={{
+                      bg: `${color}.500`,
+                    }}
+                    rounded="full"
+                    onClick={() => goProject(item.link)}
+                  >
+                    {item.name}
+                  </Button>
+                ))}
+              </Stack>
 
-            <Text fontSize="xl">Technologies</Text>
+              <Text fontSize="xl">Technologies</Text>
 
-            <Wrap>
-              {techArray.map((tech, index) => (
-                <Badge key={index} colorScheme="blue">
-                  {tech}
-                </Badge>
-              ))}
-            </Wrap>
+              <Wrap>
+                {techArray.map((tech, index) => (
+                  <Badge key={index} colorScheme="blue">
+                    {tech}
+                  </Badge>
+                ))}
+              </Wrap>
+            </Box>
           </Stack>
         </Stack>
       </Stack>

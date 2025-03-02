@@ -77,8 +77,8 @@ export default function Experience({ color }) {
                 <CardFooter>
                   <HStack spacing={2}>
                     {exp.badges.map((badge) => (
-                      <Badge key={badge.name} colorScheme={badge.colorScheme}>
-                        {badge.name}
+                      <Badge key={badge} colorScheme="blue">
+                        {badge}
                       </Badge>
                     ))}
                   </HStack>

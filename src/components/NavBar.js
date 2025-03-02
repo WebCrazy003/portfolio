@@ -1,3 +1,5 @@
+import { useMemo, useState } from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
 import {
   Flex,
   Button,
@@ -11,38 +13,29 @@ import {
   IconButton,
   useMediaQuery,
   useDisclosure,
-  HStack,
   Link,
+  Image,
 } from '@chakra-ui/react';
 import { MoonIcon, SunIcon, HamburgerIcon } from '@chakra-ui/icons';
-import { useState } from 'react';
 import ProfileArray from './ProfileArray';
 
 const TbIcons = require('react-icons/tb');
 
-export default function Nav({ color }) {
+export default function Nav() {
   const profile = ProfileArray();
-  const colors = {
-    blue: '#3182CE',
-    cyan: '#00B5D8',
-    gray: '#718096',
-    green: '#38A169',
-    orange: '#DD6B20',
-    pink: '#D53F8C',
-    purple: '#805AD5',
-    red: '#E53E3E',
-    teal: '#319795',
-    yellow: '#D69E2E',
-  };
   const [scroll, setScroll] = useState(false);
   const { colorMode, toggleColorMode } = useColorMode();
   const { isOpen, onOpen, onClose } = useDisclosure();
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const showLinks = useMemo(
+    () => !(location.pathname && location.pathname.includes('detail')),
+    [location.pathname],
+  );
 
   const [isLargerThanMD] = useMediaQuery('(min-width: 48em)');
-  const scrollToHero = () => {
-    const heroSection = document.querySelector('#hero');
-    heroSection.scrollIntoView({ behavior: 'smooth' });
-  };
+
   const scrollToAbout = () => {
     const aboutSection = document.querySelector('#about');
     aboutSection.scrollIntoView({ behavior: 'smooth' });
@@ -74,6 +67,10 @@ export default function Nav({ color }) {
     TbLetterComponents.push(component);
   }
 
+  const goHome = () => {
+    navigate('/');
+  };
+
   return (
     <Flex
       bg={useColorModeValue('gray.100', 'gray.900')}
@@ -87,17 +84,19 @@ export default function Nav({ color }) {
       justifyContent="space-between"
       w="100%"
     >
-      <Link onClick={scrollToHero}>
-        <HStack>
-          {TbLetterComponents.map((Component, index) => (
-            <Component key={index} color={colors[color]} />
-          ))}
-        </HStack>
+      <Link>
+        <Button variant="plain" onClick={goHome}>
+          <Image
+            height="40px"
+            src={`${process.env.PUBLIC_URL}/logo.png`}
+            alt="logo"
+          />
+        </Button>
       </Link>
 
       <Flex alignItems="center">
         <Stack direction="row" spacing={7}>
-          {isLargerThanMD ? (
+          {isLargerThanMD && showLinks && (
             <>
               <Button variant="ghost" onClick={scrollToAbout}>
                 About
@@ -112,8 +111,6 @@ export default function Nav({ color }) {
                 Contact
               </Button>
             </>
-          ) : (
-            <></>
           )}
           <Button onClick={toggleColorMode}>
             {colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
