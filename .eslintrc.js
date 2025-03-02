@@ -14,5 +14,6 @@ module.exports = {
     'react/no-array-index-key': 'off',
     'jsx-a11y/anchor-is-valid': 'off',
     'react/jsx-no-useless-fragment': 'off',
+    'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
   },
 };
