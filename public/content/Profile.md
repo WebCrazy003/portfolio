@@ -2,12 +2,12 @@
 - Portable Portfolio
 
 ## Header
-- Hi, my name is Eldora. 
-- I'm a software engineer.
-- Short Description Here.
+- Hi, my name is James.
+- I am a full-stack software engineer.
+- short description
 
 ## About
-Write your "About" section here.
+James is a Full-Stack Engineer with 12 years of experience in web and mobile development. He specializes in delivering high-quality solutions, optimizing system efficiency, and building product applications, all while maintaining a clean, organized codebase.
 
 ## Contact
 Write your "Contact" section here.

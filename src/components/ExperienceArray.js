@@ -21,7 +21,8 @@ const parseExperience = (mdContent) => {
       const badges = [];
       const listItems = [];
 
-      // while (lines[++i] && !lines[i].startsWith('- Badges:')) {}
+      /* eslint-disable-next-line no-empty */
+      while (lines[++i] && !lines[i].startsWith('- Badges:')) {}
       while (lines[++i] && lines[i].startsWith('  - ')) {
         const badgeLine = lines[i].substr(4).split('[');
         const badgeName = badgeLine[0].trim();
