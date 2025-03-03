@@ -1,26 +1,17 @@
-## Project A
-Description
-- ![600x200](https://fastly.picsum.photos/id/112/1200/900.jpg?hmac=Z-CjHdiQBKvo7eWMGdgCLAb4cR86H05lkwEwdi56sdU)
+## Startly Labs
+Startly was developed to streamline service company management, including resource, customer, project, and asset management.
+- ![600x200](../assets/startly/overview.webp)
 - Tags: Category 1
 - Badges:
   - Badge [blue]
 - Buttons:
-  - Link [https://example.com]
+  - Go Details [/detail/startly]
 
-## Project B
-Description
-- ![600x200](https://fastly.picsum.photos/id/112/1200/900.jpg?hmac=Z-CjHdiQBKvo7eWMGdgCLAb4cR86H05lkwEwdi56sdU)
+## Social Sweet
+Sweet.io (or Sweet for short) is an NFT platform established in New York in 2016 focused on enabling NFTs to be used extensively in the commerce world. With Sweet.io, you can gift, share, integrate, auction, gamify, and drop NFTs anywhere, even on e-commerce stores. You can also get SUGAR tokens from the app by simply listening to music.
+- ![600x200](../assets/sweet/auction-end.webp)
 - Tags: Category 2
 - Badges:
   - Badge [blue]
 - Buttons:
-  - Link [https://example.com]
-
-## Project C
-Description
-- ![600x200](https://fastly.picsum.photos/id/112/1200/900.jpg?hmac=Z-CjHdiQBKvo7eWMGdgCLAb4cR86H05lkwEwdi56sdU)
-- Tags: Category 3
-- Badges:
-  - Badge [blue]
-- Buttons:
-  - Link [https://example.com]
+  - Go Details [/detail/sweet]

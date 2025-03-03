@@ -31,6 +31,10 @@ function Detail({ color }) {
     return (IMAGE_ARRAY[project] && IMAGE_ARRAY[project].techArray) || [];
   }, [project]);
 
+  const aboutArray = useMemo(() => {
+    return (IMAGE_ARRAY[project] && IMAGE_ARRAY[project].about) || [];
+  }, [project]);
+
   const goProject = (link) => {
     // eslint-disable-next-line no-undef
     window.open(link, '_blank', 'noopener,noreferrer');
@@ -73,8 +77,10 @@ function Detail({ color }) {
 
           <Stack width="25%">
             <Box position="sticky" top={100}>
-              <Text fontSize="xl">About</Text>
-              <Text>{IMAGE_ARRAY[project] && IMAGE_ARRAY[project].about}</Text>
+              <Text fontSize="xl">What I did</Text>
+              {aboutArray.map((text) => (
+                <Text>{text}</Text>
+              ))}
 
               <Stack direction="row" my={3}>
                 {buttonArray.map((item, index) => (
@@ -93,7 +99,9 @@ function Detail({ color }) {
                 ))}
               </Stack>
 
-              <Text fontSize="xl">Technologies</Text>
+              <Text fontSize="xl" mb={2}>
+                Technologies
+              </Text>
 
               <Wrap>
                 {techArray.map((tech, index) => (
