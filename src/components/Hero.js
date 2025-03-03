@@ -26,13 +26,17 @@ const Arrow = createIcon({
 
 export default function Header({ color }) {
   const profile = ProfileArray();
+
   const scrollToContact = () => {
     const contactSection = document.querySelector('#contact');
     contactSection.scrollIntoView({ behavior: 'smooth' });
   };
-  const linkedin = () => {
-    window.open(`${profile.linkedin}`, '_blank', 'noreferrer,noopener');
+
+  const scrollToProject = () => {
+    const projectSection = document.querySelector('#projects');
+    projectSection.scrollIntoView({ behavior: 'smooth' });
   };
+
   return (
     <>
       <Heading>
@@ -78,9 +82,9 @@ export default function Header({ color }) {
               _hover={{
                 bg: `${color}.500`,
               }}
-              onClick={linkedin}
+              onClick={scrollToProject}
             >
-              Let&apos;s connect!
+              Explore my projects!
             </Button>
             <Button
               variant="link"

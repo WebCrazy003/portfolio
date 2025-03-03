@@ -1,12 +1,9 @@
 import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 import Nav from './components/NavBar';
-import Header from './components/Hero';
-import About from './components/About';
-import Experience from './components/Experience';
-import Projects from './components/Projects';
-import Contact from './components/Contact';
-import Footer from './components/Footer';
+import Home from './pages/Home';
+import Detail from './pages/Detail';
 
 function App() {
   // Available Colours:
@@ -16,15 +13,14 @@ function App() {
   const color = 'teal';
 
   return (
-    <>
+    <Router>
       <Nav color={color} />
-      <Header color={color} />
-      <About color={color} />
-      <Experience color={color} />
-      <Projects color={color} />
-      <Contact color={color} />
-      <Footer />
-    </>
+
+      <Routes>
+        <Route path="/" element={<Home color={color} />} />
+        <Route path="/detail/:project" element={<Detail color={color} />} />
+      </Routes>
+    </Router>
   );
 }
 
