@@ -84,6 +84,36 @@ const IMAGE_ARRAY = {
     ],
     techArray: ['TypeScript', 'Web3.js', 'Next.js', 'React.js', 'React Native'],
   },
+  quicken: {
+    projectName: 'Personal Finance Management - Quicken',
+    imgArray: [
+      { imageName: 'Track Spending', imageFileName: 'spending' },
+      { imageName: 'Personalize Budget', imageFileName: 'personalized-budget' },
+      { imageName: 'Bill Tracker', imageFileName: 'bill-tracker' },
+      { imageName: 'Retirement Account', imageFileName: 'retirement-account' },
+      { imageName: 'Investment Tracking', imageFileName: 'investments' },
+      {
+        imageName: 'Home Business Finance',
+        imageFileName: 'home-business-finance',
+      },
+      {
+        imageName: 'Home Business Tax Prep',
+        imageFileName: 'home-business-tax',
+      },
+      { imageName: 'Custom Invoice', imageFileName: 'custom-invoice' },
+      {
+        imageName: 'Rental Property Management',
+        imageFileName: 'rental-property-management',
+      },
+      { imageName: 'Mobile Version', imageFileName: 'mobile-version' },
+    ],
+    buttons: [{ name: 'WEBSITE', link: 'https://www.quicken.com/' }],
+    about: [
+      '- I improved system performance by refactoring microservices architecture, reducing API response time by 30%, increasing transaction processing efficiency by 40%, and enhancing overall application scalability to support 50% more concurrent users.',
+      '- I developed and enhanced key financial features by implementing React.js for a dynamic user interface and optimizing backend services using Node.js, Java, and Spring.',
+    ],
+    techArray: ['Node.js', 'React.js', 'Java', 'Spring', 'Microservices'],
+  },
 };
 
 // eslint-disable-next-line import/prefer-default-export
