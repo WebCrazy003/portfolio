@@ -7,16 +7,16 @@ import {
   HStack,
   Card,
   CardHeader,
-  CardBody,
-  CardFooter,
+  // CardBody,
+  // CardFooter,
   Flex,
-  Badge,
+  // Badge,
   Image,
-  List,
-  ListItem,
-  ListIcon,
+  // List,
+  // ListItem,
+  // ListIcon,
 } from '@chakra-ui/react';
-import { ChevronRightIcon } from '@chakra-ui/icons';
+// import { ChevronRightIcon } from '@chakra-ui/icons';
 import { Fade } from 'react-reveal';
 import ExperienceArray from './ExperienceArray';
 
@@ -44,7 +44,7 @@ export default function Experience({ color }) {
           {experience.map((exp) => (
             <Fade bottom>
               <Card key={exp.company} size="sm">
-                <CardHeader>
+                <CardHeader marginTop={5} marginBottom={5}>
                   <Flex justifyContent="space-between">
                     <HStack>
                       <Image src={exp.image} h={50} />
@@ -58,7 +58,7 @@ export default function Experience({ color }) {
                     </Text>
                   </Flex>
                 </CardHeader>
-                <CardBody>
+                {/* <CardBody>
                   <Flex>
                     <List align="left" spacing={3}>
                       {exp.listItems.map((item, index) => (
@@ -73,8 +73,8 @@ export default function Experience({ color }) {
                       ))}
                     </List>
                   </Flex>
-                </CardBody>
-                <CardFooter>
+                </CardBody> */}
+                {/* <CardFooter>
                   <HStack spacing={2}>
                     {exp.badges.map((badge) => (
                       <Badge key={badge} colorScheme="blue">
@@ -82,7 +82,7 @@ export default function Experience({ color }) {
                       </Badge>
                     ))}
                   </HStack>
-                </CardFooter>
+                </CardFooter> */}
               </Card>
             </Fade>
           ))}

@@ -37,16 +37,17 @@ const IMAGE_ARRAY = {
     ],
     buttons: [{ name: 'WEBSITE', link: 'https://www.startly.com/' }],
     about: [
-      '- Joined as a founding engineer and entrusted with leading the entire front-end application development process.',
+      '- Joined as a founding engineer and entrusted with leading the entire application development process.',
       '- Constructed a custom component library, contributing to a 30% reduction in development time.',
     ],
-    techArray: [
-      'React Hooks',
-      'TypeScript',
-      'Ant Design',
-      'Mobx',
-      'React Native',
-    ],
+    // techArray: [
+    //   'React Hooks',
+    //   'TypeScript',
+    //   'Ant Design',
+    //   'Mobx',
+    //   'React Native',
+    // ],
+    techArray: [],
   },
   sweet: {
     projectName: 'NFT platform - Sweet',
@@ -82,7 +83,8 @@ const IMAGE_ARRAY = {
       '- Optimized performance with lazy loading, code splitting, and image optimization, cutting page load time by 30%.',
       '- Created a dynamic auction page, boosting user engagement by 23% and bids by 15%',
     ],
-    techArray: ['TypeScript', 'Web3.js', 'Next.js', 'React.js', 'React Native'],
+    // techArray: ['TypeScript', 'Web3.js', 'Next.js', 'React.js', 'React Native'],
+    techArray: [],
   },
   quicken: {
     projectName: 'Personal Finance Management - Quicken',
@@ -110,9 +112,10 @@ const IMAGE_ARRAY = {
     buttons: [{ name: 'WEBSITE', link: 'https://www.quicken.com/' }],
     about: [
       '- I improved system performance by refactoring microservices architecture, reducing API response time by 30%, increasing transaction processing efficiency by 40%, and enhancing overall application scalability to support 50% more concurrent users.',
-      '- I developed and enhanced key financial features by implementing React.js for a dynamic user interface and optimizing backend services using Node.js, Java, and Spring.',
+      '- I developed and enhanced key financial features for a dynamic user interface and optimizing backend services.',
     ],
-    techArray: ['Node.js', 'React.js', 'Java', 'Spring', 'Microservices'],
+    // techArray: ['Node.js', 'React.js', 'Java', 'Spring', 'Microservices'],
+    techArray: [],
   },
 };
 

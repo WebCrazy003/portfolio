@@ -3,13 +3,13 @@ import { useNavigate, useParams } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 import {
-  Badge,
+  // Badge,
   Box,
   Button,
   Container,
   Stack,
   Text,
-  Wrap,
+  // Wrap,
 } from '@chakra-ui/react';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
@@ -27,9 +27,9 @@ function Detail({ color }) {
     return (IMAGE_ARRAY[project] && IMAGE_ARRAY[project].buttons) || [];
   }, [project]);
 
-  const techArray = useMemo(() => {
-    return (IMAGE_ARRAY[project] && IMAGE_ARRAY[project].techArray) || [];
-  }, [project]);
+  // const techArray = useMemo(() => {
+  //   return (IMAGE_ARRAY[project] && IMAGE_ARRAY[project].techArray) || [];
+  // }, [project]);
 
   const aboutArray = useMemo(() => {
     return (IMAGE_ARRAY[project] && IMAGE_ARRAY[project].about) || [];
@@ -99,7 +99,7 @@ function Detail({ color }) {
                 ))}
               </Stack>
 
-              <Text fontSize="xl" mb={2}>
+              {/* <Text fontSize="xl" mb={2}>
                 Technologies
               </Text>
 
@@ -109,7 +109,7 @@ function Detail({ color }) {
                     {tech}
                   </Badge>
                 ))}
-              </Wrap>
+              </Wrap> */}
             </Box>
           </Stack>
         </Stack>
