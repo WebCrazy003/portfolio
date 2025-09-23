@@ -11,7 +11,7 @@ James is a Full-Stack Engineer with 12 years of experience in web and mobile dev
 
 ## Contact
 Thank you for visiting my portfolio site! If you have any questions, collaboration requests, job opportunities, or any other inquiries, please feel free to reach out to me. I look forward to hearing from you!
-- Email: james.nih.zhang11@gmail.com
+- Email: james.yn.zhang@gmail.com
 
 ## Logo
 - EB

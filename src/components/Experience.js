@@ -51,6 +51,7 @@ export default function Experience({ color }) {
                       <Box px={2} align="left">
                         <Text fontWeight={600}>{exp.company}</Text>
                         <Text>{exp.position}</Text>
+                        <Text>{exp.desc}</Text>
                       </Box>
                     </HStack>
                     <Text px={2} fontWeight={300}>

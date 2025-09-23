@@ -46,7 +46,7 @@ export default function Contact({ color }) {
           <Center>
             <HStack pt={4} spacing={4} onClick={email} cursor="pointer">
               <FaEnvelope size={28} />
-              <Text>james.nih.zhang11@gmail.com</Text>
+              <Text>james.yn.zhang@gmail.com</Text>
             </HStack>
           </Center>
         </Stack>
