@@ -6,7 +6,7 @@ const parseExperience = () => {
       image: '../assets/builders_capital.png',
       company: 'Builders Capital',
       position: 'Software Engineer',
-      duration: '03/2022 - 08/2025',
+      duration: '03/2022 - 08/2026',
       // badges: ['React', 'TypeScript', 'Ant Design', 'Mobx', 'React Native'],
       badges: [],
       listItems: [],
