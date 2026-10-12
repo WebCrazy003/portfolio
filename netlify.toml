@@ -1,0 +1,8 @@
+[build]
+  command = "yarn build"
+  publish = "build"
+
+[build.environment]
+  NODE_VERSION = "20"
+  # CI=true turns lint warnings (no-console in *Array.js) into build errors
+  DISABLE_ESLINT_PLUGIN = "true"

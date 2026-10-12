@@ -29,21 +29,25 @@ const parseProfile = (mdContent) => {
           profile.headerRole = lines[++i].substr(2).trim();
           profile.headerDesc = lines[++i].substr(2).trim();
           break;
-        case 'About':
-          profile.about = lines[++i].trim();
+        case 'About': {
+          // Multi-line markdown, up to the next section
+          const aboutLines = [];
+          while (i + 1 < lines.length && !lines[i + 1].startsWith('## ')) {
+            aboutLines.push(lines[++i]);
+          }
+          profile.about = aboutLines.join('\n').trim();
           break;
+        }
         case 'Contact':
           profile.contact = lines[++i].trim();
 
-          // for (const link of contactLinks) {
-          contactLinks.forEach((link) => {
-            const linkLine = lines[++i].substr(2).trim();
-            if (linkLine.startsWith(link)) {
-              profile[link.toLowerCase()] = linkLine.split(': ')[1].trim();
+          // Links are optional and may appear in any order
+          while (i + 1 < lines.length && lines[i + 1].startsWith('- ')) {
+            const [key, ...value] = lines[++i].substr(2).split(': ');
+            if (contactLinks.includes(key.trim())) {
+              profile[key.trim().toLowerCase()] = value.join(': ').trim();
             }
-          });
-
-          // }
+          }
           break;
         case 'Logo':
           profile.logo = lines[++i].substr(2).trim();

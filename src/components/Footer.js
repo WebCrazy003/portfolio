@@ -13,7 +13,7 @@ export default function Footer() {
       color={useColorModeValue('gray.700', 'gray.200')}
     >
       <Container as={Stack} maxW="6xl" py={4} align="center">
-        <Text>© 2025. Made with passion by James.</Text>
+        <Text>© 2026. Made with passion by Richard.</Text>
       </Container>
     </Box>
   );

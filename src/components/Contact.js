@@ -40,13 +40,10 @@ export default function Contact({ color }) {
           <Text color="gray.600" fontSize="xl" px={4}>
             {profile.contact}
           </Text>
-          <Text color={`${color}.500`} fontWeight={600} fontSize="lg" px={4}>
-            {profile.email}
-          </Text>
           <Center>
             <HStack pt={4} spacing={4} onClick={email} cursor="pointer">
               <FaEnvelope size={28} />
-              <Text>james.yn.zhang@gmail.com</Text>
+              <Text>{profile.email}</Text>
             </HStack>
           </Center>
         </Stack>
